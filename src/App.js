@@ -12,7 +12,7 @@ class App extends Component {
   updateInput(key, value){
     //update react state
     this.setState({
-      [key]: value
+      [key]: value,
     })
   }
   addItem(){
@@ -62,6 +62,8 @@ class App extends Component {
           Add
           </button>
           <br/>
+
+          <p>To-do List:</p>
           <ul>
             {this.state.list.map(item => {
               return (
@@ -76,6 +78,19 @@ class App extends Component {
               )
             })}
           </ul>
+
+          <p>Completed Tasks:</p>
+          <ul>
+            {this.state.list.map(item => {
+              return (
+                <li key={item.id}>
+                  {item.value}
+                  <button onClick={() => this.deleteItem(item.id)}>X</button>
+                </li>
+              )
+            })}
+          </ul>
+
         </div>
     </div>
     ) 
