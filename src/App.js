@@ -6,9 +6,11 @@ class App extends Component {
 
     this.state={
       newItem:"",
-      list:[]
+      list:[],
+      doneList:[],
     }
   }
+
   updateInput(key, value){
     //update react state
     this.setState({
@@ -44,6 +46,21 @@ class App extends Component {
     this.setState({list:updatedList})
   }
 
+  addItemToDone(id) {
+    //copy current list of items
+    const doneList = [...this.state.doneList]
+
+    //get item that was just checked by the user
+    const itemChecked = "teste"
+
+    //update the checked list
+    // const updateDoneList = doneList.push(id)
+    doneList.push(id)
+
+    this.setState({doneList}) 
+
+  }
+
   render() {
     return (
       <div className="App">
@@ -63,14 +80,14 @@ class App extends Component {
           </button>
           <br/>
 
-          <p>To-do List:</p>
+          <p>Tasks to do:</p>
           <ul>
             {this.state.list.map(item => {
               return (
                 <li key={item.id}>
                   {item.value}
                   <button
-                  onClick={() => this.deleteItem(item.id)}
+                  onClick= {() => {this.deleteItem(item.id); this.addItemToDone(item.id);}}
                   >
                   X
                   </button>
@@ -79,13 +96,14 @@ class App extends Component {
             })}
           </ul>
 
-          <p>Completed Tasks:</p>
+          <p>Tasks done:</p>
           <ul>
-            {this.state.list.map(item => {
+            {this.state.doneList.map(item => {
               return (
                 <li key={item.id}>
                   {item.value}
-                  <button onClick={() => this.deleteItem(item.id)}>X</button>
+                  {item.id}
+
                 </li>
               )
             })}
