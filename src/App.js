@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import NewTask from './NewTask'
 
 class App extends Component {
   constructor(props){
@@ -60,24 +61,24 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="inputArea">
-          <p>Add an Item...</p>
-          <input type="text" placeholder="Type item here..." value={this.state.newItem} onChange={e => this.updateInput("newItem", e.target.value)}/>
-          <button onClick={() => this.addItem()}>Add</button>
+        <NewTask 
+          addItem={this.addItem} 
+          list={this.list}
+        />
 
-          <div className="taskList">
-            <p>Tasks to do:</p>
-            <ul>
-              {this.state.list.map(item => {
-                return (
-                  <li key={item.id}>
-                    {item.value}
-                    <button onClick= {() => {this.deleteItem(item.id); this.addItemToDone(item);}}>X</button>
-                  </li>
-                  )
-                })}
-            </ul>          
-          </div>
+        <div className="taskList">
+          <p>Tasks to do:</p>
+          <ul>
+            {this.state.list.map(item => {
+              return (
+                <li key={item.id}>
+                  {item.value}
+                  <button onClick= {() => {this.deleteItem(item.id); this.addItemToDone(item);}}>X</button>
+                </li>
+                )
+              })}
+          </ul>          
+        </div>
 
         <div className="tasksDone">
           <p>Tasks done:</p>
@@ -90,7 +91,6 @@ class App extends Component {
           </ul>        
         </div>
       </div>
-    </div>
     ) 
   }
 }
