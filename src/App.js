@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './style.css'
 
 class App extends Component {
   constructor(props){
@@ -64,6 +65,7 @@ class App extends Component {
           <p>Add an Item...</p>
           <input type="text" placeholder="Type item here..." value={this.state.newItem} onChange={e => this.updateInput("newItem", e.target.value)}/>
           <button onClick={() => this.addItem()}>Add</button>
+        </div>
 
           <div className="taskList">
             <p>Tasks to do:</p>
@@ -90,7 +92,6 @@ class App extends Component {
           </ul>        
         </div>
       </div>
-    </div>
     ) 
   }
 }
