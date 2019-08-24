@@ -50,11 +50,7 @@ class App extends Component {
     //copy current list of items
     const doneList = [...this.state.doneList]
 
-    //get item that was just checked by the user
-    const itemChecked = "teste"
-
     //update the checked list
-    // const updateDoneList = doneList.push(id)
     doneList.push(id)
 
     this.setState({doneList}) 
@@ -64,52 +60,36 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div>
-          Add an Item...
-          <br/>
-          <input
-            type="text"
-            placeholder="Type item here..."
-            value={this.state.newItem}
-            onChange={e => this.updateInput("newItem", e.target.value)}
-          />
-          <button
-            onClick={() => this.addItem()}
-          >
-          Add
-          </button>
-          <br/>
+        <div className="inputArea">
+          <p>Add an Item...</p>
+          <input type="text" placeholder="Type item here..." value={this.state.newItem} onChange={e => this.updateInput("newItem", e.target.value)}/>
+          <button onClick={() => this.addItem()}>Add</button>
 
-          <p>Tasks to do:</p>
-          <ul>
-            {this.state.list.map(item => {
-              return (
-                <li key={item.id}>
-                  {item.value}
-                  <button
-                  onClick= {() => {this.deleteItem(item.id); this.addItemToDone(item.id);}}
-                  >
-                  X
-                  </button>
-                </li>
-              )
-            })}
-          </ul>
+          <div className="taskList">
+            <p>Tasks to do:</p>
+            <ul>
+              {this.state.list.map(item => {
+                return (
+                  <li key={item.id}>
+                    {item.value}
+                    <button onClick= {() => {this.deleteItem(item.id); this.addItemToDone(item);}}>X</button>
+                  </li>
+                  )
+                })}
+            </ul>          
+          </div>
 
+        <div className="tasksDone">
           <p>Tasks done:</p>
           <ul>
             {this.state.doneList.map(item => {
               return (
-                <li key={item.id}>
-                  {item.value}
-                  {item.id}
-
-                </li>
+                <li>{item.value}</li>
               )
             })}
-          </ul>
-
+          </ul>        
         </div>
+      </div>
     </div>
     ) 
   }
