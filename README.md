@@ -14,7 +14,7 @@ O todoApp é um to-do list que permite ao usuário adicionar, visualizar e compl
 
 ## Como ele funciona
 
-
+![todo-hd](https://github.com/guiemi/todoApp/blob/master/media/todo-hd.gif)
 
 
 
