@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
+<<<<<<< HEAD
 import NewTask from './NewTask'
+=======
+import './style.css'
+>>>>>>> 8b2179cae9c8b1435107d7a7dd0a480109461cda
 
 class App extends Component {
   constructor(props){
@@ -61,6 +65,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+<<<<<<< HEAD
         <NewTask 
           addItem={this.addItem} 
           list={this.list}
@@ -79,9 +84,29 @@ class App extends Component {
               })}
           </ul>          
         </div>
+=======
+        <div className="inputArea">
+          <span>MinimalList</span>
+          <input type="text" placeholder="Add a task" value={this.state.newItem} onChange={e => this.updateInput("newItem", e.target.value)}/>
+          <button onClick={() => this.addItem()}>Add</button>
+        </div>
 
-        <div className="tasksDone">
-          <p>Tasks done:</p>
+          <div className="taskList">
+            <span>Tasks to do:</span>
+            <ul>
+              {this.state.list.map(item => {
+                return (
+                  <li key={item.id}>{item.value} <button onClick= {() => {this.deleteItem(item.id); this.addItemToDone(item);}}>Complete task</button></li>
+                  )
+                })}
+            </ul>          
+          </div>
+>>>>>>> 8b2179cae9c8b1435107d7a7dd0a480109461cda
+
+        <div 
+        className="tasksDone" 
+        style={{display: this.state.doneList.length > 0 ? 'inline-block' : 'none'}} >
+          <span>Tasks completed: </span>
           <ul>
             {this.state.doneList.map(item => {
               return (

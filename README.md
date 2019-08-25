@@ -1,68 +1,73 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# todoApp
 
-## Available Scripts
+# Introdução
 
-In the project directory, you can run:
+O todoApp é um to-do list feito usando React. Ele permite ao usuário adicionar, visualizar e completar tarefas. Ele também mostra dinamicamente a lista das tarefas completadas.
 
-### `npm start`
+![todo](https://github.com/guiemi/todoApp/blob/master/media/todoApp_screenshot.png)
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Instalação / pré-requisitos
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+* O único requisito necessário é que você tenha instalados o **npm** (Node Package Manager) e o Node.js. Para baixá-lo na sua máquina, visite o [nodejs.org/pt-br](https://nodejs.org/pt-br/).
 
-### `npm test`
+# O todoApp
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Como funciona
 
-### `npm run build`
+Seu funcionamento é **straight to the point**, facilitando ao usuário a criação de listas rápidas de tarefas. Depois de adicionada a tarefa, ela é mostrada imediatamente abaixo na tela. E, para melhor visualização do fluxo **daquilo que já foi feito x o que ainda precisa ser feito**, as tarefas já completadas são mostradas dinamicamente imediatamente abaixo da *to-do list* principal.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![todo-hd](https://github.com/guiemi/todoApp/blob/master/media/todo-hd.gif)
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+# Diário de Bordo
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Dia 1/4 (quinta): primeiros passos
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Aprendendo os fundamentos do React
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+No primeiro dia eu **aprendi os básicos sobre** `props` **e** `states`. Visualizei de forma geral o "dialeto" que o React usa **a partir da sintaxe do JavaScript**. Outro aspecto importante do primeiro dia foi aprender o fluxo de código dentro da **organização de pastas e arquivos** dessa library.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Utilizei o tutorial **[Create a Simple Todo app in React](https://medium.com/@kris101/create-a-simple-todo-app-in-react-72d9341a7e6c)** (de autoria de Krissanawat Kaewsanmuang) para me familiarizar melhor com o React.
 
-## Learn More
+## Dia 2/4 (sexta): estados
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Aprendendo sobre estados
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Na sexta-feira, li sobre estados (o funcionamento do `setState`). Entendi melhor também como configurar os estados das funções para que um item marcado como "completed" apareça na lista de "Tasks done".
 
-### Code Splitting
+A aplicação ganhou uma nova feature: uma tarefa, ao ser marcada como completada, é movida para uma lista de "Tasks done".
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## Dia 3/4 (sábado): desacoplamento de componentes e layout
 
-### Analyzing the Bundle Size
+### Reorganizando a estrutura do código
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+No sábado, estudei a disposição dos diretórios do React para uma melhor organização dos componentes. Criei uma branch a partir da master afim de desacoplar o App.js, inserindo cada componente em uma pasta dedicada, porém não alcancei os resultados desejados e, então, passei para a próxima tarefa que era estruturar o layout.
 
-### Making a Progressive Web App
+### Adicionando CSS ao layout
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+Preferi usar o CSS *vanilla* (e Flexbox) para desenhar o layout, primeiramente porque estou praticando flexbox; e também porque talvez eu perdesse tempo lendo sobre como implementar o Bootstrap, o Miligram ou outro *framework* CSS neste projeto. Por ser um app simples, o uso do CSS puro inicialmente me pareceu ser a melhor decisão.
 
-### Advanced Configuration
+## Dia 4/4 (domingo)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+### Finalizando a documentação
 
-### Deployment
+No último dia, finalizei a escrita e a revisão da documentação do projeto: adicionei um *screenshot* e um *gif* do app ao README e também inseri uma seção de "próximos passos", que em breve será transformada em *issues* no GitHub.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+# Próximos passos
+- [x] ~~Enviar as tarefas completadas automaticamente para uma lista de "*Tasks completed*"~~
+- [x] ~~Mostrar dinamicamente a lista de tarefas completadas somente se ela não estiver vazia~~
+- [ ] Adicionar a opção de editar/apagar uma tarefa na lista principal
+- [ ] Adicionar a opção de apagar todas as tarefas já concluídas
+- [ ] Adicionar a opção de apagar todas as tarefas de todas as listas
+- [ ] Desacoplar os componentes do App.js e organizá-los em pastas dedicadas
 
-### `npm run build` fails to minify
+# Referências
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+* **Artigo**: [Create a Simple Todo app in React](https://medium.com/@kris101/create-a-simple-todo-app-in-react-72d9341a7e6c) (Medium)
+* **Tutorial em vídeo**: https://www.youtube.com/watch?v=e_ZibOe77yo&t=577s 
+* Arrow functions: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+* **React.js Cheatsheet**: https://devhints.io/react
+* **Artigo**: [Understanding React setState](https://css-tricks.com/understanding-react-setstate/) (CSS-TRICKS)
+* **Talk**: [The introduction to Reat you've been missing](https://www.youtube.com/watch?v=SAIdyBFHfVU) (Kent C. Dodds @UtahJS)
+* **Paleta de cores**: [#1443225](https://colorhunt.co/palette/143225) (ColorHunt)
