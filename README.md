@@ -4,7 +4,7 @@
 
 O todoApp é um to-do list que permite ao usuário adicionar, visualizar e completas tarefas. Ele também mostra dinamicamente a lista de tarefas completadas.
 
-![todo](https://github.com/guiemi/todoApp/blob/master/media/todo-gif.mp4)
+![todo](https://github.com/guiemi/todoApp/blob/master/media/todo.gif)
 
 ## Instalação / pré-requisitos
 
