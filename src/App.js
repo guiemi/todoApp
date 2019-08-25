@@ -78,7 +78,9 @@ class App extends Component {
             </ul>          
           </div>
 
-        <div className="tasksDone">
+        <div 
+        className="tasksDone" 
+        style={{display: this.state.doneList.length > 0 ? 'flex' : 'none'}} >
           <p>Tasks done:</p>
           <ul>
             {this.state.doneList.map(item => {

@@ -1,5 +1,19 @@
 # TO-DO LIST APP
 
+# Introdução
+
+* (Depois da introdução vai um screenshot (ou gif) dele funcionando)
+
+## Instalação / pré-requisitos
+
+
+
+# MinimalList
+
+## Como ele funciona
+
+
+
 # Diário de Bordo
 
 ## Dia 1/4 (quinta): primeiros passos
@@ -9,8 +23,6 @@
 No primeiro dia eu **aprendi os básicos sobre** `props` **e** `states`. Visualizei de forma geral o "dialeto" que o React usa **a partir da sintaxe do JavaScript**. Outro aspecto importante do primeiro dia foi aprender o fluxo de código dentro da **organização de pastas e arquivos** dessa library.
 
 Utilizei o tutorial **[Create a Simple Todo app in React](https://medium.com/@kris101/create-a-simple-todo-app-in-react-72d9341a7e6c)** (de autoria de Krissanawat Kaewsanmuang) para me familiarizar com o React.
-
-### 
 
 ## Dia 2/4 (sexta)
 
