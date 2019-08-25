@@ -1,68 +1,41 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# TO-DO LIST APP
 
-## Available Scripts
+#Diário de Bordo
 
-In the project directory, you can run:
+## Dia 1/4 (quinta): primeiros passos
 
-### `npm start`
+### Aprendendo os fundamentos do React
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+No primeiro dia eu **aprendi os básicos sobre** `props` **e** `states`. Visualizei de forma geral o "dialeto" que o React usa **a partir da sintaxe do JavaScript**. Outro aspecto importante do primeiro dia foi aprender o fluxo de código dentro da **organização de pastas e arquivos** dessa library.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Utilizei o tutorial **[Create a Simple Todo app in React](https://medium.com/@kris101/create-a-simple-todo-app-in-react-72d9341a7e6c)** (de autoria de Krissanawat Kaewsanmuang) para me familiarizar com o React.
 
-### `npm test`
+### 
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Dia 2/4 (sexta)
 
-### `npm run build`
+### Aprendendo sobre estados
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Na sexta-feira, li sobre estados (o funcionamento do `setState`). Entendi melhor também como configurar os estados das funções para que um item marcado como "completed" apareça na lista de "Tasks done".
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+A aplicação ganhou uma nova feature: uma tarefa, ao ser marcada como completada, é movida para uma lista de "Tasks done".
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Dia 3/4 (sábado):
 
-### `npm run eject`
+### Reorganizando a estrutura do código
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Sábado, estudei a disposição dos diretórios do React para uma melhor organização dos componentes.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Dia 4/4 (domingo): fazendo deploy no heroku
 
-## Learn More
+# Referências
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+* **Artigo**: [Create a Simple Todo app in React](https://medium.com/@kris101/create-a-simple-todo-app-in-react-72d9341a7e6c) (Medium)
+* **Tutorial em vídeo**: https://www.youtube.com/watch?v=e_ZibOe77yo&t=577s 
+* Arrow functions: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+* **React.js Cheatsheet**: https://devhints.io/react
+* **Artigo**: [Understanding React setState](https://css-tricks.com/understanding-react-setstate/) (CSS-TRICKS)
+* **Talk**: [The introduction to Reat you've been missing](https://www.youtube.com/watch?v=SAIdyBFHfVU) (Kent C. Dodds @UtahJS)
+* 
