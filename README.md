@@ -50,4 +50,4 @@ Sábado, estudei a disposição dos diretórios do React para uma melhor organiz
 * **React.js Cheatsheet**: https://devhints.io/react
 * **Artigo**: [Understanding React setState](https://css-tricks.com/understanding-react-setstate/) (CSS-TRICKS)
 * **Talk**: [The introduction to Reat you've been missing](https://www.youtube.com/watch?v=SAIdyBFHfVU) (Kent C. Dodds @UtahJS)
-* 
+* **Paleta de cores**: [#1443225](https://colorhunt.co/palette/143225) (ColorHunt)
