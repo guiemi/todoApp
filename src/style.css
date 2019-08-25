@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 body {
-    background-color: #cfcfcf;
+    background-color: #fff5eb;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -21,11 +21,15 @@ body {
 
 /* Input box */
 .inputArea input {
-    background: whitesmoke;
+    background: #f6e0b3;
     border: none;
     border-radius: 50px;
     padding: 5px 10px;
     margin-left: 10px;
+}
+
+span {
+    color: #4e4e4e;
 }
 
 .taskList, .tasksDone {
@@ -33,7 +37,7 @@ body {
     padding: 0 10% 1% 10%;
     margin-bottom: 20px;
     min-width: 20%;
-    background-color: whitesmoke;
+    background-color: #f6e0b3;
     width: 50%;
     max-width: 100%;
 }
@@ -53,7 +57,7 @@ body {
 
 /* Tasks items' buttons */
 .taskList li button, .App .inputArea button  {
-    background-color: gray;
+    background-color: #4e4e4e;
     border: none;
     border-radius: 50px;
     cursor: pointer;

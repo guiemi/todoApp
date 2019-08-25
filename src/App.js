@@ -62,13 +62,13 @@ class App extends Component {
     return (
       <div className="App">
         <div className="inputArea">
-          MinimalList
+          <span>MinimalList</span>
           <input type="text" placeholder="Add a task" value={this.state.newItem} onChange={e => this.updateInput("newItem", e.target.value)}/>
           <button onClick={() => this.addItem()}>Add</button>
         </div>
 
           <div className="taskList">
-            <p>Tasks to do:</p>
+            <span>Tasks to do:</span>
             <ul>
               {this.state.list.map(item => {
                 return (
@@ -80,8 +80,8 @@ class App extends Component {
 
         <div 
         className="tasksDone" 
-        style={{display: this.state.doneList.length > 0 ? 'flex' : 'none'}} >
-          <p>Tasks done:</p>
+        style={{display: this.state.doneList.length > 0 ? 'inline-block' : 'none'}} >
+          <span>Tasks completed: </span>
           <ul>
             {this.state.doneList.map(item => {
               return (
