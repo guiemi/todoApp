@@ -55,6 +55,8 @@ Preferi usar o CSS *vanilla* (e Flexbox) para desenhar o layout, primeiramente p
 No último dia, finalizei a escrita e a revisão da documentação do projeto: adicionei um *screenshot* e um *gif* do app ao README e também inseri uma seção de "próximos passos", que em breve será transformada em *issues* no GitHub.
 
 # Próximos passos
+- [x] Enviar as tarefas completadas automaticamente para uma lista de "*Tasks completed*"
+- [x] Mostrar dinamicamente a lista de tarefas completadas somente se ela não estiver vazia
 - [ ] Adicionar a opção de editar/apagar uma tarefa na lista principal
 - [ ] Adicionar a opção de apagar todas as tarefas já concluídas
 - [ ] Adicionar a opção de apagar todas as tarefas de todas as listas
