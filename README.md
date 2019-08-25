@@ -1,6 +1,6 @@
 # TO-DO LIST APP
 
-#Diário de Bordo
+# Diário de Bordo
 
 ## Dia 1/4 (quinta): primeiros passos
 
