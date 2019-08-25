@@ -8,11 +8,13 @@ O todoApp é um to-do list que permite ao usuário adicionar, visualizar e compl
 
 ## Instalação / pré-requisitos
 
-
+* O único requisito necessário é que você tenha instalados o **npm** (Node Package Manager) e o Node.js. Para baixá-lo na sua máquina, visite o [nodejs.org/pt-br](https://nodejs.org/pt-br/).
 
 # MinimalList
 
 ## Como ele funciona
+
+
 
 
 
