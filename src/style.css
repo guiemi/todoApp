@@ -33,14 +33,11 @@ span {
     color: #4e4e4e;
 }
 
-<<<<<<< Updated upstream
-=======
 span.title {
     border: 2px #4e4e4e solid;
     padding: 5px;
 }
 
->>>>>>> Stashed changes
 .taskList,
 .tasksDone {
     border-radius: 20px;
