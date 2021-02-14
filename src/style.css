@@ -18,7 +18,7 @@ body {
 .inputArea {
     margin: 3rem;
     padding: 1rem;
-    
+
 }
 
 /* Input box */
@@ -34,7 +34,8 @@ span {
     color: #4e4e4e;
 }
 
-.taskList, .tasksDone {
+.taskList,
+.tasksDone {
     border-radius: 20px;
     padding: 1% 10% 1% 10%;
     margin-bottom: 20px;
@@ -45,7 +46,8 @@ span {
 }
 
 /* Task items */
-.taskList ul, .tasksDone ul {
+.taskList ul,
+.tasksDone ul {
     text-align: left;
     list-style-type: none;
     margin-bottom: 5px;
@@ -58,7 +60,8 @@ span {
 
 
 /* Tasks items' buttons */
-.taskList li button, .App .inputArea button  {
+.taskList li button,
+.App .inputArea button {
     background-color: #4e4e4e;
     border: none;
     border-radius: 50px;

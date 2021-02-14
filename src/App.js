@@ -1,7 +1,7 @@
 import React, { Component, useState } from "react";
-import CompletedTasks from './Components/CompletedTasks'
-import InputArea from './Components/InputArea';
-import TaskList from './Components/TaskList';
+import CompletedTasks from "./Components/CompletedTasks";
+import InputArea from "./Components/InputArea";
+import TaskList from "./Components/TaskList";
 
 import "./style.css";
 

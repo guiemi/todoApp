@@ -1,7 +1,6 @@
 import React from "react";
 
 const CompletedTasks = ({ doneList }) => {
-
   return (
     <div
       className="tasksDone"

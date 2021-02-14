@@ -9,7 +9,7 @@ const TaskList = ({ deleteItem, addItemToDone, list }) => {
     <div className="taskList">
       <span>Tasks to do:</span>
       <ul>
-        {list && (
+        {list &&
           list.map((item) => {
             return (
               <li key={item.id}>
@@ -24,8 +24,7 @@ const TaskList = ({ deleteItem, addItemToDone, list }) => {
                 </button>
               </li>
             );
-          })
-        )}
+          })}
       </ul>
     </div>
   );

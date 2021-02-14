@@ -8,17 +8,15 @@ O todoApp é um to-do list feito usando React. Ele permite ao usuário adicionar
 
 ## Instalação / pré-requisitos
 
-* O único requisito necessário é que você tenha instalados o **npm** (Node Package Manager) e o Node.js. Para baixá-lo na sua máquina, visite o [nodejs.org/pt-br](https://nodejs.org/pt-br/).
+- O único requisito necessário é que você tenha instalados o **npm** (Node Package Manager) e o Node.js. Para baixá-lo na sua máquina, visite o [nodejs.org/pt-br](https://nodejs.org/pt-br/).
 
 # O todoApp
 
 ## Como funciona
 
-Seu funcionamento é **straight to the point**, facilitando ao usuário a criação de listas rápidas de tarefas. Depois de adicionada a tarefa, ela é mostrada imediatamente abaixo na tela. E, para melhor visualização do fluxo **daquilo que já foi feito x o que ainda precisa ser feito**, as tarefas já completadas são mostradas dinamicamente imediatamente abaixo da *to-do list* principal.
+Seu funcionamento é **straight to the point**, facilitando ao usuário a criação de listas rápidas de tarefas. Depois de adicionada a tarefa, ela é mostrada imediatamente abaixo na tela. E, para melhor visualização do fluxo **daquilo que já foi feito x o que ainda precisa ser feito**, as tarefas já completadas são mostradas dinamicamente imediatamente abaixo da _to-do list_ principal.
 
 ![todo-hd](https://github.com/guiemi/todoApp/blob/master/media/todo-hd.gif)
-
-
 
 # Diário de Bordo
 
@@ -46,16 +44,17 @@ No sábado, estudei a disposição dos diretórios do React para uma melhor orga
 
 ### Adicionando CSS ao layout
 
-Preferi usar o CSS *vanilla* (e Flexbox) para desenhar o layout, primeiramente porque estou praticando flexbox; e também porque talvez eu perdesse tempo lendo sobre como implementar o Bootstrap, o Miligram ou outro *framework* CSS neste projeto. Por ser um app simples, o uso do CSS puro inicialmente me pareceu ser a melhor decisão.
+Preferi usar o CSS _vanilla_ (e Flexbox) para desenhar o layout, primeiramente porque estou praticando flexbox; e também porque talvez eu perdesse tempo lendo sobre como implementar o Bootstrap, o Miligram ou outro _framework_ CSS neste projeto. Por ser um app simples, o uso do CSS puro inicialmente me pareceu ser a melhor decisão.
 
 ## Dia 4/4 (domingo)
 
 ### Finalizando a documentação
 
-No último dia, finalizei a escrita e a revisão da documentação do projeto: adicionei um *screenshot* e um *gif* do app ao README e também inseri uma seção de "próximos passos", que em breve será transformada em *issues* no GitHub.
+No último dia, finalizei a escrita e a revisão da documentação do projeto: adicionei um _screenshot_ e um _gif_ do app ao README e também inseri uma seção de "próximos passos", que em breve será transformada em _issues_ no GitHub.
 
 # Próximos passos
-- [x] ~~Enviar as tarefas completadas automaticamente para uma lista de "*Tasks completed*"~~
+
+- [x] ~~Enviar as tarefas completadas automaticamente para uma lista de "_Tasks completed_"~~
 - [x] ~~Mostrar dinamicamente a lista de tarefas completadas somente se ela não estiver vazia~~
 - [ ] Adicionar a opção de editar/apagar uma tarefa na lista principal
 - [ ] Adicionar a opção de apagar todas as tarefas já concluídas
@@ -64,10 +63,10 @@ No último dia, finalizei a escrita e a revisão da documentação do projeto: a
 
 # Referências
 
-* **Artigo**: [Create a Simple Todo app in React](https://medium.com/@kris101/create-a-simple-todo-app-in-react-72d9341a7e6c) (Medium)
-* **Tutorial em vídeo**: https://www.youtube.com/watch?v=e_ZibOe77yo&t=577s 
-* Arrow functions: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions
-* **React.js Cheatsheet**: https://devhints.io/react
-* **Artigo**: [Understanding React setState](https://css-tricks.com/understanding-react-setstate/) (CSS-TRICKS)
-* **Talk**: [The introduction to Reat you've been missing](https://www.youtube.com/watch?v=SAIdyBFHfVU) (Kent C. Dodds @UtahJS)
-* **Paleta de cores**: [#1443225](https://colorhunt.co/palette/143225) (ColorHunt)
+- **Artigo**: [Create a Simple Todo app in React](https://medium.com/@kris101/create-a-simple-todo-app-in-react-72d9341a7e6c) (Medium)
+- **Tutorial em vídeo**: https://www.youtube.com/watch?v=e_ZibOe77yo&t=577s
+- Arrow functions: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+- **React.js Cheatsheet**: https://devhints.io/react
+- **Artigo**: [Understanding React setState](https://css-tricks.com/understanding-react-setstate/) (CSS-TRICKS)
+- **Talk**: [The introduction to Reat you've been missing](https://www.youtube.com/watch?v=SAIdyBFHfVU) (Kent C. Dodds @UtahJS)
+- **Paleta de cores**: [#1443225](https://colorhunt.co/palette/143225) (ColorHunt)
