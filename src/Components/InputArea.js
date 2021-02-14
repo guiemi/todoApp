@@ -1,15 +1,20 @@
 import React from "react";
 
-const InputArea = ({ newItem, updateInputHandler, addItem, updateInput }) => (
+const InputArea = ({
+  handleChange,
+  newItem,
+  handleClick,
+  updateInput,
+}) => (
   <div className="inputArea">
-    <span>MinimalList</span>
+    <span className="title">Minimal List</span>
     <input
       type="text"
       placeholder="Add a task"
       value={updateInput}
-      onChange={(e) => updateInputHandler("newItem", e.target.value)}
+      onChange={handleChange}
     />
-    <button onClick={() => addItem()}>Add</button>
+    <button onClick={handleClick}>Add</button>
   </div>
 );
 

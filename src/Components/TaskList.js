@@ -13,7 +13,7 @@ const TaskList = ({ deleteItem, addItemToDone, list }) => {
           list.map((item) => {
             return (
               <li key={item.id}>
-                {item.value}{" "}
+                {item}
                 <button
                   onClick={() => {
                     deleteItem(item.id);

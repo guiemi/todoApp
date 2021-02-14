@@ -1,50 +1,39 @@
-import React, { Component, useState } from "react";
+import React, { useEffect, useState } from "react";
 import CompletedTasks from "./Components/CompletedTasks";
 import InputArea from "./Components/InputArea";
 import TaskList from "./Components/TaskList";
 
 import "./style.css";
 
-const App = (props) => {
-  const [newItem, setNewItem] = useState("");
-  const [list, setList] = useState([]);
+const App = () => {
+  const [newItem, setNewItem] = useState();
+  const [list, setList] = useState();
   const [doneList, setDoneList] = useState([]);
   const [updateInput, setUpdateInput] = useState();
 
-  const updateInputHandler = (key, value) => {
-    //update react state
-    setUpdateInput({
-      [key]: value,
+  const handleChange = (event) => {
+    setUpdateInput(event.target.value);
+  };
+
+  const handleClick = (event) => {
+    event.preventDefault();
+    console.log(`This was submitted: ${updateInput}`);
+    setNewItem({
+      id: 1 + Math.random(),
+      value: updateInput.slice(),
     });
+
+    // setList(newItem);
   };
 
-  const addItem = () => {
-    //create item with unique id
-    // const newItem={
-    //   id: 1 + Math.random(),
-    //   value: newItem.slice()
-    // }
-    setNewItem({ id: 1 + Math.random(), value: newItem.slice() });
-
-    //copy of current list of items
-    // const list = [...list]
-    setList([...list]);
-
-    // add new item to list
-    list.push(newItem);
-
-    // update state with new list and reset newItem input
-    // setState({
-    //   list,
-    //   newItem:""
-    // })
-    setNewItem([...list, newItem]);
-  };
+  useEffect(() => {
+    setList(newItem);
+  }, [newItem]);
 
   const deleteItem = (id) => {
     // copy current list of items
     // const list = [...list]
-    setList([...list]);
+    // setList([...list]);
 
     //filter out item being deleted
     const updatedList = list.filter((item) => item.id !== id);
@@ -67,10 +56,10 @@ const App = (props) => {
   return (
     <div className="App">
       <InputArea
-        addItem={addItem}
-        updateInputHandler={updateInputHandler}
+        handleClick={handleClick}
         newItem={newItem}
         updateInput={updateInput}
+        handleChange={handleChange}
       />
       <TaskList
         list={list}
