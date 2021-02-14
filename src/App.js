@@ -70,9 +70,14 @@ const App = (props) => {
         addItem={addItem}
         updateInputHandler={updateInputHandler}
         newItem={newItem}
+        updateInput={updateInput}
       />
-      {/* <TaskList />
-      <CompletedTasks /> */}
+      <TaskList
+        list={list}
+        deleteItem={deleteItem}
+        addItemToDone={addItemToDone}
+      />
+      <CompletedTasks doneList={doneList} />
     </div>
   );
 };
