@@ -4,7 +4,7 @@
 
 O todoApp é um to-do list feito usando React. Ele permite ao usuário adicionar, visualizar e completar tarefas. Ele também mostra dinamicamente a lista das tarefas completadas.
 
-![todo](https://github.com/guiemi/todoApp/blob/master/media/todoApp_screenshot.png)
+![todo](https://github.com/guiemi/todoApp/blob/main/media/todoApp_screenshot.png)
 
 ## Instalação / pré-requisitos
 
@@ -16,7 +16,7 @@ O todoApp é um to-do list feito usando React. Ele permite ao usuário adicionar
 
 Seu funcionamento é **straight to the point**, facilitando ao usuário a criação de listas rápidas de tarefas. Depois de adicionada a tarefa, ela é mostrada imediatamente abaixo na tela. E, para melhor visualização do fluxo **daquilo que já foi feito x o que ainda precisa ser feito**, as tarefas já completadas são mostradas dinamicamente imediatamente abaixo da _to-do list_ principal.
 
-![todo-hd](https://github.com/guiemi/todoApp/blob/master/media/todo-hd.gif)
+![todo-hd](https://github.com/guiemi/todoApp/blob/main/media/todo-hd.gif)
 
 # Diário de Bordo
 
