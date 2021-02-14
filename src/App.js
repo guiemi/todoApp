@@ -1,123 +1,80 @@
-import React, { Component } from 'react';
-<<<<<<< HEAD
-import NewTask from './NewTask'
-=======
-import './style.css'
->>>>>>> 8b2179cae9c8b1435107d7a7dd0a480109461cda
+import React, { Component, useState } from "react";
+import CompletedTasks from './Components/CompletedTasks'
+import InputArea from './Components/InputArea';
+import TaskList from './Components/TaskList';
 
-class App extends Component {
-  constructor(props){
-    super(props)
+import "./style.css";
 
-    this.state={
-      newItem:"",
-      list:[],
-      doneList:[],
-    }
-  }
+const App = (props) => {
+  const [newItem, setNewItem] = useState("");
+  const [list, setList] = useState([]);
+  const [doneList, setDoneList] = useState([]);
+  const [updateInput, setUpdateInput] = useState();
 
-  updateInput(key, value){
+  const updateInputHandler = (key, value) => {
     //update react state
-    this.setState({
+    setUpdateInput({
       [key]: value,
-    })
-  }
-  addItem(){
+    });
+  };
+
+  const addItem = () => {
     //create item with unique id
-    const newItem={
-      id: 1 + Math.random(),
-      value: this.state.newItem.slice()
-    }
+    // const newItem={
+    //   id: 1 + Math.random(),
+    //   value: newItem.slice()
+    // }
+    setNewItem({ id: 1 + Math.random(), value: newItem.slice() });
 
     //copy of current list of items
-    const list = [...this.state.list]
+    // const list = [...list]
+    setList([...list]);
 
     // add new item to list
-    list.push(newItem)
+    list.push(newItem);
 
     // update state with new list and reset newItem input
-    this.setState({
-      list,
-      newItem:""
-    })
-  }
-  deleteItem(id){
+    // setState({
+    //   list,
+    //   newItem:""
+    // })
+    setNewItem([...list, newItem]);
+  };
+
+  const deleteItem = (id) => {
     // copy current list of items
-    const list = [...this.state.list]
+    // const list = [...list]
+    setList([...list]);
 
     //filter out item being deleted
-    const updatedList = list.filter(item => item.id !== id)
+    const updatedList = list.filter((item) => item.id !== id);
 
-    this.setState({list:updatedList})
-  }
+    // setState({list:updatedList})
+    setList({ updatedList });
+  };
 
-  addItemToDone(id) {
+  const addItemToDone = (id) => {
     //copy current list of items
-    const doneList = [...this.state.doneList]
+    // const doneList = [...doneList]
+    setDoneList([...doneList]);
 
     //update the checked list
-    doneList.push(id)
+    doneList.push(id);
 
-    this.setState({doneList}) 
+    // setState({doneList})
+  };
 
-  }
-
-  render() {
-    return (
-      <div className="App">
-<<<<<<< HEAD
-        <NewTask 
-          addItem={this.addItem} 
-          list={this.list}
-        />
-
-        <div className="taskList">
-          <p>Tasks to do:</p>
-          <ul>
-            {this.state.list.map(item => {
-              return (
-                <li key={item.id}>
-                  {item.value}
-                  <button onClick= {() => {this.deleteItem(item.id); this.addItemToDone(item);}}>X</button>
-                </li>
-                )
-              })}
-          </ul>          
-        </div>
-=======
-        <div className="inputArea">
-          <span>MinimalList</span>
-          <input type="text" placeholder="Add a task" value={this.state.newItem} onChange={e => this.updateInput("newItem", e.target.value)}/>
-          <button onClick={() => this.addItem()}>Add</button>
-        </div>
-
-          <div className="taskList">
-            <span>Tasks to do:</span>
-            <ul>
-              {this.state.list.map(item => {
-                return (
-                  <li key={item.id}>{item.value} <button onClick= {() => {this.deleteItem(item.id); this.addItemToDone(item);}}>Complete task</button></li>
-                  )
-                })}
-            </ul>          
-          </div>
->>>>>>> 8b2179cae9c8b1435107d7a7dd0a480109461cda
-
-        <div 
-        className="tasksDone" 
-        style={{display: this.state.doneList.length > 0 ? 'inline-block' : 'none'}} >
-          <span>Tasks completed: </span>
-          <ul>
-            {this.state.doneList.map(item => {
-              return (
-                <li>{item.value}</li>
-              )
-            })}
-          </ul>        
-        </div>
-      </div>
-    ) 
-  }
-}
+  return (
+    <div className="App">
+      <InputArea
+        addItem={addItem}
+        updateInputHandler={updateInputHandler}
+        newItem={newItem}
+      />
+      {/* <TaskList />
+      <CompletedTasks /> */}
+    </div>
+  );
+};
 
 export default App;
