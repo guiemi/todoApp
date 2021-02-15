@@ -29,12 +29,14 @@ body {
     margin-left: 10px;
 }
 
+
+
 span {
     color: #4e4e4e;
 }
 
 span.title {
-    border: 2px #4e4e4e solid;
+    border: 3px #4e4e4e solid;
     padding: 5px;
 }
 
@@ -65,7 +67,7 @@ span.title {
 
 /* Tasks items' buttons */
 .taskList li button,
-.App .inputArea button {
+.App .inputArea .submitButton {
     background-color: #4e4e4e;
     border: none;
     border-radius: 50px;
@@ -74,11 +76,10 @@ span.title {
     padding: 5px 10px;
     margin: 5px;
     color: whitesmoke;
+
+
 }
 
 .taskList li button:hover {
     background-color: rgba(0, 136, 169, 0.8);
 }
-
-/* .tasksDone {
-} */

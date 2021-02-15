@@ -1,21 +1,17 @@
 import React from "react";
 
-const InputArea = ({
-  handleChange,
-  newItem,
-  handleClick,
-  updateInput,
-}) => (
-  <div className="inputArea">
+const InputArea = ({ handleChange, newItem, handleSubmit, updateInput }) => (
+  <form onSubmit={handleSubmit} className="inputArea">
     <span className="title">Minimal List</span>
     <input
       type="text"
+      // value={updateInput}
       placeholder="Add a task"
-      value={updateInput}
       onChange={handleChange}
     />
-    <button onClick={handleClick}>Add</button>
-  </div>
+
+    <input className="submitButton" value="Add/Submit" type="submit" />
+  </form>
 );
 
 export default InputArea;

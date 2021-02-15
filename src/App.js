@@ -7,66 +7,59 @@ import "./style.css";
 
 const App = () => {
   const [newItem, setNewItem] = useState();
-  const [list, setList] = useState();
+  const [list, setList] = useState([]);
   const [doneList, setDoneList] = useState([]);
-  const [updateInput, setUpdateInput] = useState();
+  const [updateInput, setUpdateInput] = useState({});
 
   const handleChange = (event) => {
-    setUpdateInput(event.target.value);
-  };
-
-  const handleClick = (event) => {
-    event.preventDefault();
-    console.log(`This was submitted: ${updateInput}`);
-    setNewItem({
-      id: 1 + Math.random(),
-      value: updateInput.slice(),
+    setUpdateInput({
+      id: 0,
+      value: event.target.value,
     });
-
-    // setList(newItem);
   };
 
-  useEffect(() => {
-    setList(newItem);
-  }, [newItem]);
-
-  const deleteItem = (id) => {
-    // copy current list of items
-    // const list = [...list]
-    // setList([...list]);
-
-    //filter out item being deleted
-    const updatedList = list.filter((item) => item.id !== id);
-
-    // setState({list:updatedList})
-    setList({ updatedList });
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(`This was submitted: ${updateInput.value}`);
+    setList([...list, updateInput.value]);
   };
 
-  const addItemToDone = (id) => {
-    //copy current list of items
-    // const doneList = [...doneList]
-    setDoneList([...doneList]);
+  // const deleteItem = (id) => {
+  //   // copy current list of items
+  //   // const list = [...list]
+  //   // setList([...list]);
 
-    //update the checked list
-    doneList.push(id);
+  //   //filter out item being deleted
+  //   const updatedList = list.filter((item) => item.id !== id);
 
-    // setState({doneList})
-  };
+  //   // setState({list:updatedList})
+  //   setList({ updatedList });
+  // };
+
+  // const addItemToDone = (id) => {
+  //   //copy current list of items
+  //   // const doneList = [...doneList]
+  //   setDoneList([...doneList]);
+
+  //   //update the checked list
+  //   doneList.push(id);
+
+  //   // setState({doneList})
+  // };
 
   return (
     <div className="App">
       <InputArea
-        handleClick={handleClick}
+        handleSubmit={handleSubmit}
         newItem={newItem}
         updateInput={updateInput}
         handleChange={handleChange}
       />
       <TaskList
         list={list}
-        deleteItem={deleteItem}
-        addItemToDone={addItemToDone}
       />
-      <CompletedTasks doneList={doneList} />
+      {/* <CompletedTasks doneList={doneList} /> */}
+      {console.log("Lista:", list)}
     </div>
   );
 };

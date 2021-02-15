@@ -1,10 +1,6 @@
 import React from "react";
 
-const TaskList = ({ deleteItem, addItemToDone, list }) => {
-  // useEffect(() => {
-  //   list;
-  // }, [list]);
-
+const TaskList = ({ list }) => {
   return (
     <div className="taskList">
       <span>Tasks to do:</span>
@@ -14,14 +10,7 @@ const TaskList = ({ deleteItem, addItemToDone, list }) => {
             return (
               <li key={item.id}>
                 {item}
-                <button
-                  onClick={() => {
-                    deleteItem(item.id);
-                    addItemToDone(item);
-                  }}
-                >
-                  Complete task
-                </button>
+                <button>Complete task</button>
               </li>
             );
           })}
