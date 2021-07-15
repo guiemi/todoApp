@@ -1,29 +1,21 @@
-import React, { Component, useState } from "react";
+import React, { Component, useEffect, useState } from "react";
 import CompletedTasks from "./Components/CompletedTasks";
 import InputArea from "./Components/InputArea";
 import TaskList from "./Components/TaskList";
 
 import "./style.css";
 
-const App = (props) => {
+const App = () => {
   const [newItem, setNewItem] = useState("");
   const [list, setList] = useState([]);
   const [doneList, setDoneList] = useState([]);
-  const [updateInput, setUpdateInput] = useState();
+  const [updateInput, setUpdateInput] = useState("");
 
-  const updateInputHandler = (key, value) => {
-    //update react state
-    setUpdateInput({
-      [key]: value,
-    });
+  const updateInputHandler = (value) => {
+    setUpdateInput(value)
   };
-
+  
   const addItem = () => {
-    //create item with unique id
-    // const newItem={
-    //   id: 1 + Math.random(),
-    //   value: newItem.slice()
-    // }
     setNewItem({ id: 1 + Math.random(), value: newItem.slice() });
 
     //copy of current list of items

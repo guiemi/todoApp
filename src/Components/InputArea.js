@@ -7,7 +7,7 @@ const InputArea = ({ newItem, updateInputHandler, addItem, updateInput }) => (
       type="text"
       placeholder="Add a task"
       value={updateInput}
-      onChange={(e) => updateInputHandler("newItem", e.target.value)}
+      onChange={(e) => updateInputHandler(e.target.value)}
     />
     <button onClick={() => addItem()}>Add</button>
   </div>
