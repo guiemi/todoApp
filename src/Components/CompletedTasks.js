@@ -1,19 +1,19 @@
 import React from "react";
 
-const CompletedTasks = ({ doneList }) => {
+const CompletedTasks = () => {
   return (
     <div
       className="tasksDone"
-      style={{
-        display: doneList.length > 0 ? "inline-block" : "none",
-      }}
+      // style={{
+      //   display: doneList.length > 0 ? "inline-block" : "none",
+      // }}
     >
       <span>Tasks completed: </span>
-      <ul>
-        {doneList.map((item) => {
-          return <li>{item.value}</li>;
-        })}
-      </ul>
+      {/* <ul> */}
+      {/*   {doneList.map((item) => { */}
+      {/*     return <li>{item.value}</li>; */}
+      {/*   })} */}
+      {/* </ul> */}
     </div>
   );
 };

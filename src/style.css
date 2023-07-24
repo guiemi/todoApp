@@ -1,79 +1,78 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 
 body {
-    background-color: #fff5eb;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
+  background-color: #fff5eb;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
 }
 
 .App {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* padding: 10px;  */
-    text-align: center;
-    margin: 0 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* padding: 10px;  */
+  text-align: center;
+  margin: 0 25%;
 }
 
 .inputArea {
-    margin: 3rem;
-    padding: 1rem;
-
+  margin: 3rem;
+  padding: 1rem;
 }
 
 /* Input box */
 .inputArea input {
-    background: #f6e0b3;
-    border: none;
-    border-radius: 50px;
-    padding: 5px 10px;
-    margin-left: 10px;
+  background: #f6e0b3;
+  border: none;
+  border-radius: 50px;
+  padding: 5px 10px;
+  margin-left: 10px;
 }
 
 span {
-    color: #4e4e4e;
+  color: #4e4e4e;
 }
 
 .taskList,
 .tasksDone {
-    border-radius: 20px;
-    padding: 1% 10% 1% 10%;
-    margin-bottom: 20px;
-    min-width: 20%;
-    background-color: #f6e0b3;
-    width: 50%;
-    max-width: 100%;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 1rem;
+  /* min-width: 20%; */
+  background-color: #f6e0b3;
+  width: 50%;
+  /* max-width: 100%; */
 }
 
 /* Task items */
 .taskList ul,
 .tasksDone ul {
-    text-align: left;
-    list-style-type: none;
-    margin-bottom: 5px;
+  text-align: left;
+  list-style-type: none;
+  margin-bottom: 5px;
 }
 
 .tasksDone ul {
-    text-decoration: line-through;
+  text-decoration: line-through;
 }
-
-
 
 /* Tasks items' buttons */
 .taskList li button,
 .App .inputArea button {
-    background-color: #4e4e4e;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-    padding: 5px 10px;
-    margin: 5px;
-    color: whitesmoke;
+  background-color: #4e4e4e;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  padding: 5px 10px;
+  margin: 5px;
+  color: whitesmoke;
 }
 
 .taskList li button:hover {
-    background-color: rgba(0, 136, 169, 0.8);
+  background-color: rgba(0, 136, 169, 0.8);
 }
 
 /* .tasksDone {

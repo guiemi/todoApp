@@ -1,75 +1,94 @@
-import React, { Component, useEffect, useState } from "react";
+import React, { useEffect, useReducer, useState } from "react";
 import CompletedTasks from "./Components/CompletedTasks";
 import InputArea from "./Components/InputArea";
 import TaskList from "./Components/TaskList";
 
 import "./style.css";
 
+const initialTodos = [
+  {
+    id: 1,
+    title: "Todo 1",
+    complete: false,
+  },
+  {
+    id: 2,
+    title: "Todo 2",
+    complete: false,
+  },
+  {
+    id: 3,
+    title: "Todo 3",
+    complete: false,
+  },
+];
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case "COMPLETE":
+      return state.map((todo) => {
+        if (todo.id === action.id) {
+          return { ...todo, complete: !todo.complete };
+        } else {
+          return todo;
+        }
+      });
+    case "INPUT":
+      return state;
+    case "ADD":
+      return [
+        ...state,
+        {
+          id: state.length + 1,
+          title: action.title,
+          complete: false,
+        },
+      ];
+    default:
+      return state;
+  }
+};
+
 const App = () => {
-  const [newItem, setNewItem] = useState("");
-  const [list, setList] = useState([]);
-  const [doneList, setDoneList] = useState([]);
-  const [updateInput, setUpdateInput] = useState("");
+  const [todos, dispatch] = useReducer(reducer, initialTodos);
+  const [inputValue, setInputValue] = useState("");
 
-  const updateInputHandler = (value) => {
-    setUpdateInput(value)
-  };
-  
-  const addItem = () => {
-    setNewItem({ id: 1 + Math.random(), value: newItem.slice() });
-
-    //copy of current list of items
-    // const list = [...list]
-    setList([...list]);
-
-    // add new item to list
-    list.push(newItem);
-
-    // update state with new list and reset newItem input
-    // setState({
-    //   list,
-    //   newItem:""
-    // })
-    setNewItem([...list, newItem]);
+  const handleComplete = (todo) => {
+    dispatch({ type: "COMPLETE", id: todo.id });
   };
 
-  const deleteItem = (id) => {
-    // copy current list of items
-    // const list = [...list]
-    setList([...list]);
-
-    //filter out item being deleted
-    const updatedList = list.filter((item) => item.id !== id);
-
-    // setState({list:updatedList})
-    setList({ updatedList });
-  };
-
-  const addItemToDone = (id) => {
-    //copy current list of items
-    // const doneList = [...doneList]
-    setDoneList([...doneList]);
-
-    //update the checked list
-    doneList.push(id);
-
-    // setState({doneList})
+  const handleAdd = (text) => {
+    dispatch({ type: "ADD", title: text });
+    setInputValue("");
   };
 
   return (
     <div className="App">
-      <InputArea
-        addItem={addItem}
-        updateInputHandler={updateInputHandler}
-        newItem={newItem}
-        updateInput={updateInput}
-      />
-      <TaskList
-        list={list}
-        deleteItem={deleteItem}
-        addItemToDone={addItemToDone}
-      />
-      <CompletedTasks doneList={doneList} />
+      <div className="inputArea">
+        <span>MinimalList</span>
+        <input
+          onChange={({ target: { value } }) => setInputValue(value)}
+          type="text"
+          placeholder="Add a task"
+          value={inputValue}
+        />
+
+        <button onClick={() => handleAdd(inputValue)}>Add</button>
+      </div>
+
+      <div className="taskList">
+        {todos &&
+          todos.map((todo) => (
+            <label key={todo.id}>
+              <input
+                type="checkbox"
+                checked={todo.complete}
+                onChange={() => handleComplete(todo)}
+              />
+              {todo.title}
+            </label>
+          ))}
+      </div>
     </div>
   );
 };
