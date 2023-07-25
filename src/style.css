@@ -1,7 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 
+p,
+* {
+  color: #695c4f;
+}
+
 body {
   background-color: #fff5eb;
+  /* background-color: #f6e0b3; */
   font-family: "Roboto", sans-serif;
   font-size: 20px;
 }
@@ -15,65 +21,34 @@ body {
   margin: 0 25%;
 }
 
-.inputArea {
-  margin: 3rem;
-  padding: 1rem;
-}
-
-/* Input box */
-.inputArea input {
-  background: #f6e0b3;
-  border: none;
-  border-radius: 50px;
-  padding: 5px 10px;
-  margin-left: 10px;
-}
-
-span {
-  color: #4e4e4e;
-}
-
-.taskList,
-.tasksDone {
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  padding: 1rem;
-  /* min-width: 20%; */
-  background-color: #f6e0b3;
-  width: 50%;
-  /* max-width: 100%; */
-}
-
 /* Task items */
-.taskList ul,
-.tasksDone ul {
-  text-align: left;
-  list-style-type: none;
-  margin-bottom: 5px;
-}
-
-.tasksDone ul {
-  text-decoration: line-through;
-}
+/* .taskList ul, */
+/* .tasksDone ul { */
+/*   text-align: left; */
+/*   list-style-type: none; */
+/*   margin-bottom: 5px; */
+/* } */
+/**/
+/* .tasksDone ul { */
+/*   text-decoration: line-through; */
+/* } */
 
 /* Tasks items' buttons */
-.taskList li button,
-.App .inputArea button {
-  background-color: #4e4e4e;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: all 0.3s ease 0s;
-  padding: 5px 10px;
-  margin: 5px;
-  color: whitesmoke;
-}
-
-.taskList li button:hover {
-  background-color: rgba(0, 136, 169, 0.8);
-}
+/* .taskList li button, */
+/* .App .inputArea button { */
+/*   background-color: #4e4e4e; */
+/*   border: none; */
+/*   border-radius: 50px; */
+/*   cursor: pointer; */
+/*   transition: all 0.3s ease 0s; */
+/*   padding: 5px 10px; */
+/*   margin: 5px; */
+/*   color: whitesmoke; */
+/* } */
+/**/
+/* .taskList li button:hover { */
+/*   background-color: rgba(0, 136, 169, 0.8); */
+/* } */
 
 /* .tasksDone {
 } */

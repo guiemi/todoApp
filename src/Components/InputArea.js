@@ -1,9 +1,9 @@
 import React from "react";
+import * as S from "./Components.styles";
 
 const InputArea = ({ setInputValue, inputValue, handleAdd }) => {
   return (
-    <div className="inputArea">
-      <span>MinimalList</span>
+    <S.InputContainer>
       <input
         onChange={({ target: { value } }) => setInputValue(value)}
         type="text"
@@ -12,7 +12,7 @@ const InputArea = ({ setInputValue, inputValue, handleAdd }) => {
       />
 
       <button onClick={() => handleAdd(inputValue)}>Add</button>
-    </div>
+    </S.InputContainer>
   );
 };
 

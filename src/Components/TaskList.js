@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import * as S from "./Components.styles";
 
 const TaskList = ({ todos, handleComplete }) => {
   const [isButtonShown, setIsButtonShown] = useState(false);
@@ -12,24 +13,28 @@ const TaskList = ({ todos, handleComplete }) => {
   };
 
   return (
-    <div className="taskList">
+    <S.TaskListContainer>
       {todos &&
         todos.map((todo) => (
-          <label
-            onMouseOver={handleMouseOver}
-            onMouseOut={handleMouseOut}
-            key={todo.id}
-          >
-            <input
-              type="checkbox"
-              checked={todo.complete}
-              onChange={() => handleComplete(todo)}
-            />
-            {todo.title}
-            {isButtonShown && <button>Delete</button>}
-          </label>
+          <S.TaskListLine>
+            <label
+              onMouseOver={handleMouseOver}
+              onMouseOut={handleMouseOut}
+              key={todo.id}
+              for="checkbox"
+            >
+              <input
+                name="checkbox"
+                type="checkbox"
+                checked={todo.complete}
+                onChange={() => handleComplete(todo)}
+              />
+              <span>{todo.title}</span>
+              {isButtonShown && <button>Delete</button>}
+            </label>
+          </S.TaskListLine>
         ))}
-    </div>
+    </S.TaskListContainer>
   );
 };
 

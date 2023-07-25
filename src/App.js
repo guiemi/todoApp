@@ -4,6 +4,7 @@ import TaskList from "./Components/TaskList";
 import { INITIAL_TODOS, reducer } from "./reducers";
 
 import "./style.css";
+import * as S from "./App.styles";
 
 const App = () => {
   const [todos, dispatch] = useReducer(reducer, INITIAL_TODOS);
@@ -19,7 +20,9 @@ const App = () => {
   };
 
   return (
-    <div className="App">
+    <S.AppContainer>
+      <span>MinimalList</span>
+
       <InputArea
         setInputValue={setInputValue}
         inputValue={inputValue}
@@ -27,7 +30,7 @@ const App = () => {
       />
 
       <TaskList todos={todos} handleComplete={handleComplete} />
-    </div>
+    </S.AppContainer>
   );
 };
 
