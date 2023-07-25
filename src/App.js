@@ -1,5 +1,4 @@
-import React, { useEffect, useReducer, useState } from "react";
-import CompletedTasks from "./Components/CompletedTasks";
+import React, { useReducer, useState } from "react";
 import InputArea from "./Components/InputArea";
 import TaskList from "./Components/TaskList";
 
@@ -64,31 +63,13 @@ const App = () => {
 
   return (
     <div className="App">
-      <div className="inputArea">
-        <span>MinimalList</span>
-        <input
-          onChange={({ target: { value } }) => setInputValue(value)}
-          type="text"
-          placeholder="Add a task"
-          value={inputValue}
-        />
+      <InputArea
+        setInputValue={setInputValue}
+        inputValue={inputValue}
+        handleAdd={handleAdd}
+      />
 
-        <button onClick={() => handleAdd(inputValue)}>Add</button>
-      </div>
-
-      <div className="taskList">
-        {todos &&
-          todos.map((todo) => (
-            <label key={todo.id}>
-              <input
-                type="checkbox"
-                checked={todo.complete}
-                onChange={() => handleComplete(todo)}
-              />
-              {todo.title}
-            </label>
-          ))}
-      </div>
+      <TaskList todos={todos} handleComplete={handleComplete} />
     </div>
   );
 };

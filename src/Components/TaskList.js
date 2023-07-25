@@ -1,31 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 
-const TaskList = ({ deleteItem, addItemToDone, list }) => {
-  // useEffect(() => {
-  //   list;
-  // }, [list]);
+const TaskList = ({ todos, handleComplete }) => {
+  const [isButtonShown, setIsButtonShown] = useState(false);
+
+  const handleMouseOver = () => {
+    setIsButtonShown(true);
+  };
+
+  const handleMouseOut = () => {
+    setIsButtonShown(false);
+  };
 
   return (
     <div className="taskList">
-      <span>Tasks to do:</span>
-      <ul>
-        {list &&
-          list.map((item) => {
-            return (
-              <li key={item.id}>
-                {item.value}{" "}
-                <button
-                  onClick={() => {
-                    deleteItem(item.id);
-                    addItemToDone(item);
-                  }}
-                >
-                  Complete task
-                </button>
-              </li>
-            );
-          })}
-      </ul>
+      {todos &&
+        todos.map((todo) => (
+          <label
+            onMouseOver={handleMouseOver}
+            onMouseOut={handleMouseOut}
+            key={todo.id}
+          >
+            <input
+              type="checkbox"
+              checked={todo.complete}
+              onChange={() => handleComplete(todo)}
+            />
+            {todo.title}
+            {isButtonShown && <button>Delete</button>}
+          </label>
+        ))}
     </div>
   );
 };
