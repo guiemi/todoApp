@@ -68,3 +68,7 @@ export const TaskListLine = styled.div`
   padding: 0.5rem;
   margin-bottom: 0.5rem;
 `;
+
+export const Title = styled.span`
+  text-decoration: ${(props) => (props.isChecked ? "line-through " : "none")};
+`;

@@ -29,8 +29,8 @@ const TaskList = ({ todos, handleComplete }) => {
                 checked={todo.complete}
                 onChange={() => handleComplete(todo)}
               />
-              <span>{todo.title}</span>
-              {isButtonShown && <button>Delete</button>}
+              <S.Title isChecked={!!todo.complete}>{todo.title}</S.Title>
+              {/* {isButtonShown && <button>Delete</button>} */}
             </label>
           </S.TaskListLine>
         ))}
