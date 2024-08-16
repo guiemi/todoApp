@@ -5,6 +5,7 @@ const TaskList = ({ todos, handleComplete }) => {
   const [isButtonShown, setIsButtonShown] = useState(false);
 
   const handleMouseOver = () => {
+    console.log("rodei");
     setIsButtonShown(true);
   };
 
@@ -29,7 +30,7 @@ const TaskList = ({ todos, handleComplete }) => {
                 checked={todo.complete}
                 onChange={() => handleComplete(todo)}
               />
-              <S.Title isChecked={!!todo.complete}>{todo.title}</S.Title>
+              <S.Title isCompleted={!!todo.complete}>{todo.title}</S.Title>
               {/* {isButtonShown && <button>Delete</button>} */}
             </label>
           </S.TaskListLine>

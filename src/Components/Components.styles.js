@@ -1,10 +1,12 @@
 import styled from "styled-components";
 
 export const InputContainer = styled.div`
+  border: solid 1px green;
+  border-radius: 15px;
   width: 50%;
   display: flex;
   justify-content: space-between;
-  margin: 3rem;
+  margin-bottom: 1rem;
   padding: 1rem;
 
   input {
@@ -13,7 +15,8 @@ export const InputContainer = styled.div`
     color: #0a0a0a;
     border: none;
     border-radius: 50px;
-    padding: 5px 10px;
+    margin-bottom: 5px;
+    height: 2.5rem;
   }
 
   button {
@@ -22,19 +25,21 @@ export const InputContainer = styled.div`
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
-    padding: 5px 10px;
-    margin: 5px;
+    height: 2.5rem;
+    width: 5rem;
+
+    margin-bottom: 5px;
     color: whitesmoke;
   }
 `;
 
 export const TaskListContainer = styled.div`
+  background-color: #eed6bd;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
-  text-align: left;
+  // text-align: left;
   padding: 1rem;
-  background-color: #eed6bd;
   width: 50%;
 
   label {
@@ -65,10 +70,9 @@ export const TaskListContainer = styled.div`
 `;
 
 export const TaskListLine = styled.div`
-  padding: 0.5rem;
-  margin-bottom: 0.5rem;
+  // padding: 0.25rem;
 `;
 
 export const Title = styled.span`
-  text-decoration: ${(props) => (props.isChecked ? "line-through " : "none")};
+  text-decoration: ${(props) => (props.isCompleted ? "line-through " : "none")};
 `;

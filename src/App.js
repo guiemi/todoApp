@@ -21,7 +21,13 @@ const App = () => {
 
   return (
     <S.AppContainer>
-      <span>MinimalList</span>
+      <span
+        style={{
+          marginBottom: "3rem",
+        }}
+      >
+        MinimalList
+      </span>
 
       <InputArea
         setInputValue={setInputValue}
